@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2018",
     "module": "commonjs",
     "lib": [
-      "es2020",
-      "dom"
+      "es2018"
     ],
     "declaration": true,
+    "outDir": "dist",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -22,10 +22,17 @@
     "strictPropertyInitialization": false,
     "typeRoots": [
       "./node_modules/@types"
-    ]
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "/opt/nodejs/productsLayer":[
+        "../../Documents/Workspace/EcommerceAWS-serverless/lambda/products/layers/productsLayer/nodejs/productRepository"
+      ]
+    }
   },
   "exclude": [
     "node_modules",
-    "cdk.out"
+    "cdk.out",
+    "dist"
   ]
 }
